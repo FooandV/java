@@ -1,0 +1,5 @@
+package co.foo.app.controller;
+
+public class HomeController {
+
+}

@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Wed Apr 24 23:10:19 COT 2019
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\Freyder\\.m2\\repository\\org\\springframework\\spring-web\\5.1.0.RELEASE\\spring-web-5.1.0.RELEASE.jar=C\:\\Program Files\\sts-3.9.6\\sts-bundle\\pivotal-tc-server\\instances\\base-instance\\wtpwebapps\\cineapp\\WEB-INF\\lib\\spring-web-5.1.0.RELEASE.jar
+org.eclipse.jst.jee.server\:cineapp=C\:\\Program Files\\sts-3.9.6\\sts-bundle\\pivotal-tc-server\\instances\\base-instance\\wtpwebapps\\cineapp

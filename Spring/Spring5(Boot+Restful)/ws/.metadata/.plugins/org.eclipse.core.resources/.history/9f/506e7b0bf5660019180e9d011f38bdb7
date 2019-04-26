@@ -1,0 +1,5 @@
+package co.foo.app.model;
+
+public class Pelicula {
+
+}

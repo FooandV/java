@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html   xmlns:th="http://www.thymeleaf.org"> <!-- se crea este namespace para poder acceder a ciertos atributos en nuestro template -->
+<head>
+<meta charset="ISO-8859-1">
+<title >Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>

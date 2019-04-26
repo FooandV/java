@@ -1,0 +1,10 @@
+package co.foo.app.controller;
+
+@Controller
+public class HomeController {
+@RequestMapping(value = "/home“, method=RequestMethod.GET)
+public String goHome() {
+// Mi lógica de negocio
+return “home“;
+}
+}

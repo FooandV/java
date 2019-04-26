@@ -1,0 +1,13 @@
+package co.foo.app.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class HomeController {
+@RequestMapping(value = "/home“, method=RequestMethod.GET)
+public String goHome() {
+// Mi lógica de negocio
+return "home";
+}
+}

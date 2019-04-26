@@ -1,0 +1,68 @@
+package co.foo.app.controller;
+
+import java.text.SimpleDateFormat;
+import java.util.LinkedList;
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import co.foo.app.model.Pelicula;
+
+@Controller
+public class HomeController {
+
+	@RequestMapping(value="/home", method=RequestMethod.GET)
+	public String goHome(){
+		return "home";
+	}
+	@RequestMapping(value="/", method=RequestMethod.GET)
+	public String mostrarPrincipal(Model model) {
+		List<Pelicula> peliculas = ; //este objeto es una lista enlazada
+//		peliculas.add("Rapdio y Furioso");
+//		peliculas.add("El aro 2");
+//		peliculas.add("Aliens");
+		
+		
+		model.addAttribute("peliculas", peliculas);
+		
+		return "home";
+	}
+	
+	
+	@RequestMapping(value="/detail")
+	public String mostrarDetalle(Model model) {
+		String tituloPelicula ="Rapidos y furiosos";
+		int duracion = 136;
+		double precioEntrada = 50;
+		
+		//para agregar estas variables al modelo hacemos uso del objeto model:
+		model.addAttribute("titulo", tituloPelicula);//el segundo parametro es el objeto que vamos a pasar a la vista
+		model.addAttribute("duracion", duracion);
+		model.addAttribute("precio", precioEntrada);
+		return "detalle"; //este es el nombre de la vista que debe ser creado
+	}
+	//Metodo para geenrar una lista de Objetos de Model (Pelicula)
+	private List<Pelicula> getLista(){
+		
+		SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+		List<Pelicula> lista = null;
+		try {
+			
+			lista = new LinkedList<>();// se le asigna una lista enlazada al objeto lista
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+}
