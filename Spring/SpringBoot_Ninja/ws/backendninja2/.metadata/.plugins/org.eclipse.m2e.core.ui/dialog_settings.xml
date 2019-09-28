@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\Freyder\Documents\GitHub\java\Spring\SpringBoot_Ninja\ws\backendninja2"/>
 			<item value="C:\Users\Freyder\Documents\dev\java\ws_sts\backendninja2"/>
 		</list>
 		<list key="projectNameTemplate">

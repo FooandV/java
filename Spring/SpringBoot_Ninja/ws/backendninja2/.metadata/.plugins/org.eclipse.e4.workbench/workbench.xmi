@@ -453,7 +453,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_SKqw0F_rEemuV70lRhzVZw" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_SKz6wF_rEemuV70lRhzVZw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_R6ckBV_rEemuV70lRhzVZw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_La2mcHthEemhi7ptFlyw7Q" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_R6ckBV_rEemuV70lRhzVZw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_SKqw0V_rEemuV70lRhzVZw" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -481,7 +481,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_SKqw2F_rEemuV70lRhzVZw" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_SKz6zV_rEemuV70lRhzVZw" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_R6cjsl_rEemuV70lRhzVZw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_La5CsXthEemhi7ptFlyw7Q" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_R6cjsl_rEemuV70lRhzVZw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_SKqw2V_rEemuV70lRhzVZw" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -601,6 +601,7 @@
     <bindings xmi:id="_R7E1y1_rEemuV70lRhzVZw" keySequence="ALT+CTRL+ARROW_UP" command="_R6ckhV_rEemuV70lRhzVZw"/>
     <bindings xmi:id="_R7E1zF_rEemuV70lRhzVZw" keySequence="ALT+CTRL+ARROW_DOWN" command="_R6WeDV_rEemuV70lRhzVZw"/>
     <bindings xmi:id="_R7E1z1_rEemuV70lRhzVZw" keySequence="CTRL+F10" command="_R6ckCV_rEemuV70lRhzVZw"/>
+    <bindings xmi:id="_LHSxQXthEemhi7ptFlyw7Q" keySequence="CTRL+J" command="_LGpRAXthEemhi7ptFlyw7Q"/>
   </bindingTables>
   <bindingTables xmi:id="_R6zv41_rEemuV70lRhzVZw" elementId="org.eclipse.mylyn.tasks.ui.views.tasks" bindingContext="_R6hcLV_rEemuV70lRhzVZw">
     <bindings xmi:id="_R6zv5F_rEemuV70lRhzVZw" keySequence="INSERT" command="_R6Wd2l_rEemuV70lRhzVZw"/>
@@ -789,6 +790,7 @@
     <bindings xmi:id="_R7E1zV_rEemuV70lRhzVZw" keySequence="CTRL+F9" command="_R6WdHl_rEemuV70lRhzVZw"/>
     <bindings xmi:id="_R7E10F_rEemuV70lRhzVZw" keySequence="CTRL+F11" command="_R6ckLl_rEemuV70lRhzVZw"/>
     <bindings xmi:id="_R7E10V_rEemuV70lRhzVZw" keySequence="CTRL+F12" command="_R6WdCl_rEemuV70lRhzVZw"/>
+    <bindings xmi:id="_LHTYUHthEemhi7ptFlyw7Q" keySequence="CTRL+J" command="_LGpRAXthEemhi7ptFlyw7Q"/>
   </bindingTables>
   <bindingTables xmi:id="_R6zv6F_rEemuV70lRhzVZw" elementId="org.eclipse.ant.ui.AntEditorScope" bindingContext="_R6hcFF_rEemuV70lRhzVZw">
     <bindings xmi:id="_R6zv6V_rEemuV70lRhzVZw" keySequence="F3" command="_R6PveF_rEemuV70lRhzVZw"/>
@@ -922,6 +924,11 @@
     <bindings xmi:id="_R7E1t1_rEemuV70lRhzVZw" keySequence="CTRL+SHIFT+ARROW_UP" command="_R6WeP1_rEemuV70lRhzVZw"/>
     <bindings xmi:id="_R7E1ul_rEemuV70lRhzVZw" keySequence="CTRL+SHIFT+ARROW_DOWN" command="_R6WeB1_rEemuV70lRhzVZw"/>
     <bindings xmi:id="_R7E1x1_rEemuV70lRhzVZw" keySequence="CTRL+2 F" command="_R6ckc1_rEemuV70lRhzVZw"/>
+    <bindings xmi:id="_LHSxQHthEemhi7ptFlyw7Q" keySequence="CTRL+J" command="_LGpRAXthEemhi7ptFlyw7Q"/>
+    <bindings xmi:id="_LHY34HthEemhi7ptFlyw7Q" keySequence="CTRL+R" command="_LGp4EXthEemhi7ptFlyw7Q"/>
+    <bindings xmi:id="_LHY34XthEemhi7ptFlyw7Q" keySequence="CTRL+U" command="_LGpRAHthEemhi7ptFlyw7Q"/>
+    <bindings xmi:id="_LHY34nthEemhi7ptFlyw7Q" keySequence="ALT+CTRL+SHIFT+M" command="_LGp4EHthEemhi7ptFlyw7Q"/>
+    <bindings xmi:id="_LHZe8HthEemhi7ptFlyw7Q" keySequence="ALT+CTRL+SHIFT+R" command="_LGpRAnthEemhi7ptFlyw7Q"/>
   </bindingTables>
   <bindingTables xmi:id="_R64obF_rEemuV70lRhzVZw" elementId="org.eclipse.wst.jsdt.ui.javaEditorScope" bindingContext="_R6hcA1_rEemuV70lRhzVZw">
     <bindings xmi:id="_R64obV_rEemuV70lRhzVZw" keySequence="CTRL+SHIFT+/" command="_R6WeHV_rEemuV70lRhzVZw"/>
@@ -1694,6 +1701,18 @@
     <persistedState key="originalCompatibilityViewBundle" value="org.springsource.ide.eclipse.commons.browser"/>
     <tags>View</tags>
     <tags>categoryTag:Spring</tags>
+  </descriptors>
+  <descriptors xmi:id="_LZnQUHthEemhi7ptFlyw7Q" elementId="org.moreunit.missingtestmethodview" label="Missing Test Methods" iconURI="platform:/plugin/org.moreunit/icons/moreunitLogo.gif" tooltip="" category="MoreUnit" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.moreunit.ui.MissingTestmethodViewPart"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.moreunit"/>
+    <tags>View</tags>
+    <tags>categoryTag:MoreUnit</tags>
+  </descriptors>
+  <descriptors xmi:id="_LZoecHthEemhi7ptFlyw7Q" elementId="org.moreunit.missingtestsview" label="Missing Tests per Project" iconURI="platform:/plugin/org.moreunit/icons/moreunitLogo.gif" tooltip="" category="MoreUnit" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.moreunit.ui.MissingTestsViewPart"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.moreunit"/>
+    <tags>View</tags>
+    <tags>categoryTag:MoreUnit</tags>
   </descriptors>
   <menuContributions xmi:id="_R5xOGF_rEemuV70lRhzVZw" elementId="org.eclipse.ui.window.customizePerspective" contributorURI="platform:/plugin/org.eclipse.platform" positionInParent="popup:toolbar">
     <children xsi:type="menu:HandledMenuItem" xmi:id="_R5xOGV_rEemuV70lRhzVZw" elementId="org.eclipse.ui.window.customizePerspective" contributorURI="platform:/plugin/org.eclipse.platform" label="%command.name.customize" command="_R5xOGl_rEemuV70lRhzVZw"/>
@@ -2938,6 +2957,11 @@
   <commands xmi:id="_SIC6v1_rEemuV70lRhzVZw" elementId="AUTOGEN:::org.springframework.ide.eclipse.aop.mylyn.ui.filter/org.springframework.ide.eclipse.beans.mylyn.ui.actions.filterSpringExplorerAction" commandName="Focus on Active Task" description="Focus on Active Task (Alt+click to reveal filtered elements)" category="_R6PvWl_rEemuV70lRhzVZw"/>
   <commands xmi:id="_SIC6wF_rEemuV70lRhzVZw" elementId="AUTOGEN:::org.eclipse.mylyn.ui.projectexplorer.filter/org.springframework.ide.eclipse.beans.mylyn.ui.actions.filterSpringExplorerAction" commandName="Focus on Active Task" description="Focus on Active Task (Alt+click to reveal filtered elements)" category="_R6PvWl_rEemuV70lRhzVZw"/>
   <commands xmi:id="_SIF98F_rEemuV70lRhzVZw" elementId="AUTOGEN:::org.springframework.ide.eclipse.ui.navigator.springExplorer.sorting/org.springframework.ide.eclipse.ui.navigator.springExplorer.sortingAction" commandName="Sort" description="Sort" category="_R6PvWl_rEemuV70lRhzVZw"/>
+  <commands xmi:id="_LGpRAHthEemhi7ptFlyw7Q" elementId="org.moreunit.createtestmethod" commandName="Create Test Method" description="Creation of a testmethod." category="_R6PvVV_rEemuV70lRhzVZw"/>
+  <commands xmi:id="_LGpRAXthEemhi7ptFlyw7Q" elementId="org.moreunit.core.commands.jumpCommand" commandName="Jump to Test/Source" description="Jump to the test or source associated to the current file." category="_LGoC4HthEemhi7ptFlyw7Q"/>
+  <commands xmi:id="_LGpRAnthEemhi7ptFlyw7Q" elementId="org.moreunit.runtestsofselectedmemberaction" commandName="Run Tests of Selected Member" description="Run all tests corresponding to the class or method under the cursor." category="_R6PvVV_rEemuV70lRhzVZw"/>
+  <commands xmi:id="_LGp4EHthEemhi7ptFlyw7Q" elementId="org.moreunit.mock.commands.mockDependencies" commandName="Mock Dependencies in Test Case..." category="_R6PvVV_rEemuV70lRhzVZw"/>
+  <commands xmi:id="_LGp4EXthEemhi7ptFlyw7Q" elementId="org.moreunit.runtestaction" commandName="Run Tests" description="Run all tests corresponding to the open class." category="_R6PvVV_rEemuV70lRhzVZw"/>
   <addons xmi:id="_R5xOG1_rEemuV70lRhzVZw" elementId="org.eclipse.e4.core.commands.service" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_R5xOHF_rEemuV70lRhzVZw" elementId="org.eclipse.e4.ui.contexts.service" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_R5xOHV_rEemuV70lRhzVZw" elementId="org.eclipse.e4.ui.bindings.service" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
@@ -2949,7 +2973,7 @@
   <addons xmi:id="_R5xOI1_rEemuV70lRhzVZw" elementId="MinMax Addon" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon"/>
   <addons xmi:id="_R5xOJF_rEemuV70lRhzVZw" elementId="org.eclipse.ui.workbench.addon.0" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
   <addons xmi:id="_R53UsF_rEemuV70lRhzVZw" elementId="SplitterAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.splitteraddon.SplitterAddon"/>
-  <addons xmi:id="_IYS0IKimEeS11vbz3f9ezw" elementId="org.eclipse.ui.ide.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
+  <addons xmi:id="_LH4nIHthEemhi7ptFlyw7Q" elementId="org.eclipse.ui.ide.addon.0" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
   <addons xmi:id="_dz0JgGOlEeSMMaPQU2nlzw" elementId="org.eclipse.ui.ide.application.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.ui.ide.application/org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon"/>
   <categories xmi:id="_R6PvMF_rEemuV70lRhzVZw" elementId="org.eclipse.team.ui.category.team" name="Team" description="Actions that apply when working with a Team"/>
   <categories xmi:id="_R6PvMV_rEemuV70lRhzVZw" elementId="org.eclipse.ui.category.views" name="Views" description="Commands for opening views"/>
@@ -2996,4 +3020,5 @@
   <categories xmi:id="_R6PvWl_rEemuV70lRhzVZw" elementId="org.eclipse.core.commands.categories.autogenerated" name="Uncategorized" description="Commands that were either auto-generated or have no category"/>
   <categories xmi:id="_R6PvW1_rEemuV70lRhzVZw" elementId="org.eclipse.wst.jsdt.ui.category.refactoring" name="Refactor - JavaScript" description="JavaScript Refactoring Actions"/>
   <categories xmi:id="_R6PvXF_rEemuV70lRhzVZw" elementId="org.springsource.ide.eclipse.quicksearch.commands.category" name="Quick Search Category"/>
+  <categories xmi:id="_LGoC4HthEemhi7ptFlyw7Q" elementId="org.moreunit.core.commands.category" name="MoreUnit"/>
 </application:Application>
