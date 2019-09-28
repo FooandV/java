@@ -1,0 +1,29 @@
+package poo;
+
+/*Ejemplo practico de HERENCIA EN JAVA*/
+
+public class Furgoneta extends Coche {  //hereda de la clase Coche, siendo Coche:SuperClase y Furgoneta: Subclase
+										/*Java no admite la herencia multiple*/
+	
+	private int capacidad_carga;
+	
+	private int plazas_extra; //numero de personas que puede almacenar
+	
+	/*se debe construir un constructor*/
+	public Furgoneta(int plazas_extra, int capacidad_carga){
+		
+		super(); // llamar al constructor de la clase padre osea Coche para darle un estado inicial a ese objeto
+		
+		//aca estamos inicializando el constructor para Furgoneta
+		this.capacidad_carga= capacidad_carga; 
+		this.plazas_extra= plazas_extra; 
+		
+	}
+	
+	public String getDatosFurgoneta(){ //metodo get
+		
+		return "la capacidad de carga es: " + capacidad_carga + " y las plazas son: " + plazas_extra;
+	}
+	
+
+}

@@ -1,0 +1,16 @@
+
+public class ejemplo {
+	
+	public static void main(String []args){
+       int x;
+		x = misterio(2,3);
+		System.out.println(x);
+     }
+	public static int misterio(int uno, int dos){
+		  int calculo = 1;
+		  for (int x=0;x<dos;x++)
+		    calculo *= uno;
+		  return calculo;
+	}
+
+}

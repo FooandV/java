@@ -1,0 +1,49 @@
+package pooD;
+/**
+ * @author freyder
+ *
+ *Este es un ejemplo de POO donde se tiene un metodo con parametro, con una variable de instancia 
+  variable o parametro enviado al metodo) 
+ *que luego es llamaddo o ejecutado por el main PruebaLibroCalificaciones.java.
+ *
+ */
+/*class LibroCalificaciones {	
+	 
+	public void mostrarMensaje(String nombreDelcurso){
+		
+		System.out.printf("Bienvenido al libro de calificaciones para \n%s!\n", nombreDelcurso);
+	}
+ 	 
+}*/
+
+/**
+* @author freyder
+*el problema se puede sustentar utilizando la variable de instancia=variable llamada desde metodos
+*getter y setter dado el caso
+*/
+
+class LibroCalificaciones{
+	
+	String nombreDelCurso;
+	
+//metodos getter y setter
+	
+	public void setNombreDelCurso(String nombre){
+		
+		nombreDelCurso= nombre;
+	}
+
+	public String getNombreDelCurso() {
+		return nombreDelCurso;
+	}
+	
+	/* Metodo set que llama a el metodo "getNombreDelCurso" 
+	 * para obtener el nombre del curso que representa la clase LibroCalificaciones*/
+	
+    public void mostrarMensaje(String nombreDelcurso){
+		
+		System.out.printf("Bienvenido al libro de calificaciones para \n%s!\n", getNombreDelCurso());
+	}
+	
+}
+		

@@ -1,0 +1,29 @@
+package pooD;
+
+import java.util.Scanner;
+
+public class PruebaLibroCalificaciones {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		/*Ejecutando con metodo constructor sin parametros*/
+		//Scanner entrada = new Scanner(System.in);
+		
+		//LibroCalificaciones miLibroCalificaciones= new LibroCalificaciones(); //llamando constructor sin parametros
+		
+		//System.out.println("Escriba el nombre del curso");
+				//String nombreDelcurso= entrada.nextLine(); //se observa que la variable declarada es = al argumento de instancia
+				//System.out.println(); //salto de linea
+				//miLibroCalificaciones.setNombreDelCurso(nombreDelcurso); 
+				//miLibroCalificaciones.mostrarMensaje(nombreDelcurso);
+
+		//llamando constructor con  parametros
+		LibroCalificaciones miLibroCalificaciones= new LibroCalificaciones("aprendiendo full java"); 
+		LibroCalificaciones miLibroCalificaciones2= new LibroCalificaciones("aprendiendo a conocerme"); 
+		
+		System.out.printf("el nombre del curso libro calificaciones es: %s\n", miLibroCalificaciones.getNombreDelCurso());
+		
+		
+	}
+
+}

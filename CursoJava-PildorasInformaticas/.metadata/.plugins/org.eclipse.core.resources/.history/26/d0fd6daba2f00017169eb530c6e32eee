@@ -1,0 +1,73 @@
+package graficos;
+
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowFocusListener;
+
+import javax.swing.JFrame;
+
+/**
+ * @author freyder esta aplicacion lo que permitira es abrir 2 ventanas y
+ *         verificar cual de ellas tiene el foco
+ */
+
+public class FocoVentana extends JFrame	implements WindowFocusListener { /*
+	 * herada de JFrame e implementa la	 * interfaz WindowFocusListener	 */
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		FocoVentana miv= new FocoVentana();
+		miv.iniciar();
+	}
+	
+	/*metodo donde se construyen los marcos:*/
+	public void iniciar(){
+		/*instanciando los objetos:*/
+		marco1= new FocoVentana();
+		marco2= new FocoVentana();
+		/*se ponen los marcos visibles:*/
+		marco1.setVisible(true);
+		marco2.setVisible(true);
+		
+		/*se posicionan:*/
+		marco1.setBounds(300, 100, 600, 350);
+		marco2.setBounds(1200, 100, 600, 350);
+		
+		/*cuando se cierren los marcos:*/
+		marco1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		marco2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		/*se ponen los marcos a la escucha del evento correspondiente:*/
+		marco1.addWindowFocusListener(this);/*el argumento es la instancia de la clase oyente, pero como el argumento es la propia clase en la que
+		estamos porque lo estamos construyento todo en la misma clase, entonces se pone el operador "this"*/
+		marco2.addWindowFocusListener(this);
+	}
+
+	@Override
+	public void windowGainedFocus(WindowEvent e) {
+		// TODO Auto-generated method stub
+		if(e.getSource()==marco1){/*e es el objeto del evento que se genera cada vez que ocurre el evento, getSource() detecta quien es el origen del evento
+		ocurrido*/
+			marco1.setTitle("");
+		}else{
+			marco2.setTitle("");
+		}
+	}
+	@Override
+	public void windowLostFocus(WindowEvent e) {
+		// TODO Auto-generated method stub
+		if(e.getSource()==marco1){/*e es el objeto del evento que se genera cada vez que ocurre el evento, getSource() detecta quien es el origen del evento
+			ocurrido*/
+				marco1.setTitle("tengo el foco!!");
+			}else{
+				marco2.setTitle("tengo el foco!!");
+			}
+	}
+
+	/*variables tipo objeto*/
+	FocoVentana marco1;
+	FocoVentana marco2;
+	
+	
+}

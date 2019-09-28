@@ -1,0 +1,10 @@
+package excepciones_I;
+
+public class Numeros_Aleatorios_Debug {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

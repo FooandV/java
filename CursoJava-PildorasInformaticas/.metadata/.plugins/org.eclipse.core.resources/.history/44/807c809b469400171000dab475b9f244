@@ -1,0 +1,24 @@
+package pooD;
+
+import java.awt.Graphics; //clase que proporciona metodos para dibujar texto y figuras
+import javax.swing.JPanel; //clase que proporciona un área en la que podemos dibujar
+
+public class PanelDibujo extends JPanel{
+	
+	public void paintComponent(Graphics g){
+		
+		super.paintComponent(g);//llama a paintComponent para asegurar que el panel se muestre correctamente
+		
+		
+		int anchura= getWidth(); //anchura total
+		int altura= getHeight(); //altura total
+		
+		g.drawLine(0, 0, anchura, altura); //dibuja una linea de la esquina superior izquierda a la esquina inferior derecha
+		
+		g.drawLine(0, altura, anchura, 0); //dibuja una linea de la esquina inferior izquierda a la esquina superior derecha
+		
+		
+	}
+	
+
+}

@@ -1,0 +1,31 @@
+package leyendo;
+
+import java.io.*;
+
+public class Acceso_Fichero {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+class Leer_Fichero{
+	
+	public void lee(){
+		
+		try {
+			FileReader entrada=new FileReader("C:/Users/freyder/Desktop/ejemplo.txt");
+			
+			int c=entrada.read();/*con esto se consigue almacenar el codigo al primer caracter que 
+			se encuentre en el fichero de texto, el metodo (public int read() throws IOException) es 
+			heredado de la clase read*/
+			
+		} catch (IOException e) {/*se debe capturar la excepcion controlada que se  obliga de la clase FileReader*/
+			System.out.println("No se ha encontrado el archivo");
+		}
+	}
+	
+	
+}

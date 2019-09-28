@@ -1,0 +1,56 @@
+package graficos;
+
+import java.awt.*;
+import java.io.File;
+import java.io.IOException;
+
+import javax.swing.*;
+import javax.imageio.*;
+
+
+public class PruebaImagenes {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MarcoImagen mimarco=new MarcoImagen();
+		mimarco.setVisible(true);
+		mimarco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+
+}
+
+class MarcoImagen extends JFrame{
+	
+	public MarcoImagen() {/*metodo constructor*/
+		// TODO Auto-generated constructor stub
+		setTitle("Marco con imagen");
+		setBounds(750, 300, 300, 200);
+		LaminaConImagen milamina=new LaminaConImagen();
+		add(milamina);
+	}
+	
+}
+class LaminaConImagen extends JPanel{
+	
+	@Override
+	protected void paintComponent(Graphics g) {
+		// TODO Auto-generated method stub
+		super.paintComponent(g);
+		
+		File miimagen= new File("src/graficos/estudiante-en-la-computadora.jpg");/*aca tenemos alcanenado la imagen*/
+		
+		try{/*esta excepsion se pone con objeto de capturar el error cuando se ejecute la instruccion:imagen =ImageIO.read(miimagen); 
+		entonces se le dice a Java que intente realizar esto:*/
+		imagen =ImageIO.read(miimagen);/*para esta instruccion debemos crear una excepsion para que de solución cuando no se encuentre el archivo en la ruta
+		o otra cosa*/
+		}
+		catch(IOException e){/*en caso de que sea cierto el error lo capture y diga:*/
+			System.out.println("La imagen no se encuentra");
+		}
+		g.drawImage(imagen, 10, 10, null);
+		
+		
+	}
+	private Image imagen;/*creando una variable de tipo Image, para almacenar la imagen que tenemos guardada en la carpeta*/
+	
+}

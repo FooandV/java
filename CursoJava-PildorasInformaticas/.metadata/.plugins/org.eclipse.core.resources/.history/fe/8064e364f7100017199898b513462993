@@ -1,0 +1,60 @@
+import java.io.IOException;
+import javax
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import com.google.gson.Gson;
+import com.unodepiera.models.User;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+@WebServlet(name = "Json", urlPatterns = {"/json"})
+public class Json extends HttpServlet
+{
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+    {
+        try
+        {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = DriverManager.getConnection(
+                "jdbc:mysql://localhost:8889/javacrud", "root", "root"
+            );
+                         String sql = "SELECT * FROM users";
+            PreparedStatement preparedStatement = con.prepareStatement(sql);
+            ResultSet rs = preparedStatement.executeQuery();
+                         
+List<User> users = new LinkedList<>();
+            User user;
+
+                         while (rs.next())
+            {
+                user = new User();
+                user.setId(rs.getInt("id"));
+                user.setUsername(rs.getString("username"));
+                user.setPassword(rs.getString("password"));
+                user.setEmail(rs.getString("email"));
+                user.setCreated(rs.getString("created"));
+                users.add(user);
+            }
+
+            String json = new Gson().toJson(users);
+            response.setContentType("application/json");
+            response.setCharacterEncoding("UTF-8");
+            response.getWriter().write(json);
+        }
+        catch (ClassNotFoundException | SQLException ex)
+        {
+            Logger.getLogger(Listado.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+}

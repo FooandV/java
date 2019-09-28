@@ -1,0 +1,43 @@
+package poo;
+import java.util.*;
+
+/**
+ * @author freyder ejemplo donde solo se utilizara el archivo Uso_empleado.java,
+ *         donde estara las nominas de una serie de empleados en una empresa, en
+ *         este se programara todas las clases y metodos, situación que no tiene
+ *         modularidad. El objeto empleado va tener una serie de
+ *         caracteristicas(propiedades): nombre, sueldo, fecha alta y un metodo:
+ *         subir sueldo
+ * 
+ */
+
+public class Uso_Empleado {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+/*
+ * Cuando se utiliza un unico elemento para programar, solamente una de las
+ * clases va tener el modificador de acceso: Public que es la que tiene el
+ * metodo main
+ */
+
+class Empleado {
+	
+	public Empleado(String nom, double sue, int agno, int mes, int dia){ //metodo constructor recibiendo parametros o argumentos
+		
+		
+	}
+	
+	/*variables de clase, que deben ser solo modificadas utilizando los metodos correspondientes, en este
+	 en este caso el metodo constructor*/
+	private String nombre;
+	private double sueldo;
+	private Date altaContrato; //variable de clase Date donde se hace necesario importar el paquete java.util
+	
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;PruebaTemporizador.java&apos; to &apos;PrimerosPasos/src/interfaces_y_clasesinternas&apos;&#x0D;&#x0A;- Original project: &apos;PrimerosPasos&apos;&#x0D;&#x0A;- Destination element: &apos;PrimerosPasos/src/interfaces_y_clasesinternas&apos;&#x0D;&#x0A;- Original element: &apos;poo.PruebaTemporizador.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;interfaces_y_clasesinternas" element1="/src&lt;poo{PruebaTemporizador.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1508368911386" units="1" version="1.0"/>
+</session>

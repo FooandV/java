@@ -1,0 +1,37 @@
+package graficos;
+
+import java.awt.*;
+import javax.swing.*;
+
+public class PruebaImagenes {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MarcoImagen mimarco=new MarcoImagen();
+		mimarco.setVisible(true);
+		mimarco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+
+}
+
+class MarcoImagen extends JFrame{
+	
+	public MarcoImagen() {/*metodo constructor*/
+		// TODO Auto-generated constructor stub
+		setTitle("Marco con imagen");
+		setBounds(750, 300, 300, 200);
+		LaminaConImagen milamina=new LaminaConImagen();
+		add(milamina);
+	}
+	
+}
+class LaminaConImagen extends JPanel{
+	
+	@Override
+	protected void paintComponent(Graphics g) {
+		// TODO Auto-generated method stub
+		super.paintComponent(g);
+		
+	}
+	
+}

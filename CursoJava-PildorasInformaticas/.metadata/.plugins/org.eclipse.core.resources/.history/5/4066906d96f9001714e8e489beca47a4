@@ -1,0 +1,54 @@
+package leyendo;
+
+import java.io.*;
+
+
+/**
+ * @author freyder: ejemplo accediendo a la información almacenada en un fichero de texto a travez
+ * de un Buffer
+ *
+ */
+public class Acceso_Fichero2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Leer_Fichero2 accediendo=new Leer_Fichero2();
+		accediendo.lee();
+	}
+
+}
+
+class Leer_Fichero2{
+	
+	public void lee(){
+		
+		InputStreamReader entrada = null;
+		try {
+			entrada=new FileReader("C:/Users/freyder/Desktop/ejemplo2.txt");
+			
+			BufferedReader mibuffer= new BufferedReader(entrada);// con esto se almacena en un Buffer(memoria
+//			intermedia el fichero de texto
+			
+			String linea="";
+			while(linea!=null){
+				
+				linea=mibuffer.readLine();/*lo que hara es leer linea a linea lo que se encuentre en el buffer
+				y lo almacena*/
+				System.out.println(linea);
+			}
+			
+			
+		} catch (IOException e) {
+			System.out.println("No se ha encontrado el archivo");
+		}finally {
+			try{
+				entrada.close();
+			}catch (IOException e) {
+				// TODO: handle exception
+			}
+		}
+		
+	}
+	
+	
+}

@@ -1,0 +1,14 @@
+
+
+public class HelloWorld
+{
+	
+     public static void main(String []args)
+     {
+        int valor;
+        for (int x=0;x<=10;x++) {
+            valor = (x*05);
+            System.out.println(valor-x);
+        }
+     }
+}

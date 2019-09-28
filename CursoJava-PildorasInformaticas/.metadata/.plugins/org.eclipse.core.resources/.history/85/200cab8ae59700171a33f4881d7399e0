@@ -1,0 +1,82 @@
+package poo;
+import javax.swing.*;
+
+
+
+/**
+ * @author freyder
+ * esta clase principal tiene dos codigos de ejemplo, uno para instanciar y realizar la ejecución
+ * de codigo para la clase coche y el otro codigo2 para ejecutar y probar la clase Furgoneta
+ */
+public class Uso_Vehiculo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		/**
+		 * @author freyder
+		 * codigo para probar la clase "Coche"
+		 */
+		
+		// Coche Renault= new Coche(); //instanciar una clase, renaul es un
+		// ejemplar de la clase coche
+
+		// System.out.println(Renault.getLargo());
+		// System.out.println("las ruedas del renault son: " + Renault.ruedas +
+		// " ruedas.");
+		/*
+		Coche mi_coche = new Coche();
+
+		mi_coche.setcolor(JOptionPane.showInputDialog("Introduce Color"));
+		*/
+		/*
+		 * esto es un error porque estamos violando las propiedades de los
+		 * objetos nunca se debe manipular directamente las propiedades o
+		 * atributos de un objeto utilizando la instancia del objeto, se viola
+		 * la encapsulacion, por eso siempre se debe utilizar los metodos
+		 * definidos Get o Set
+		 */
+		// mi_coche.color="rosa";
+		/*
+		System.out.println(mi_coche.getcolor());
+
+		System.out.println(mi_coche.get_datos_generales());
+
+		mi_coche.set_configura_asientos(JOptionPane.showInputDialog("¿tiene asientos de cuero?"));
+
+		System.out.println(mi_coche.get_asientos_cuero());
+
+		mi_coche.set_aire_acondicionado(JOptionPane.showInputDialog("¿tiene aire acondicionado?"));
+
+		System.out.println(mi_coche.get_aire_acondicionado());
+
+		System.out.println(mi_coche.dime_peso_coche());
+
+		System.out.println("El precio final del carro es: " + mi_coche.get_precio_coche());
+		 */
+		
+		/**
+		 * @author freyder
+		 * Código para probar la clase "Furgoneta"
+		 */
+		
+		Coche micoche1= new Coche(); //instancia de la clase Coche
+		
+		micoche1.setcolor("Rojo");
+		
+		Furgoneta mifurgoneta1= new Furgoneta(7, 580); //creando objeto furgoneta
+		
+		mifurgoneta1.setcolor("azul");
+		mifurgoneta1.set_configura_asientos("si");
+		mifurgoneta1.set_aire_acondicionado("si");
+		
+		System.out.println(micoche1.get_datos_generales() + " " + micoche1.getcolor());
+		
+		System.out.println(mifurgoneta1.get_datos_generales() + mifurgoneta1.getDatosFurgoneta());
+		
+		
+		
+	}
+	
+
+}

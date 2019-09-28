@@ -1,0 +1,27 @@
+package leyendo;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+
+public class Acceso_Fichero {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+class Leer_Fichero{
+	
+	public void lee(){
+		
+		try {
+			FileReader entrada=new FileReader("C:/Users/freyder/Desktop/ejemplo.txt");
+		} catch (FileNotFoundException e) {
+			System.out.println("No se ha encontrado el archivo");
+		}
+	}
+	
+	
+}

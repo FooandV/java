@@ -1,0 +1,56 @@
+package poo;
+
+public class Ejemplo_Final_Constantes {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Empleados trabajador1= new Empleados("Alejandra");
+		Empleados trabajador2= new Empleados("Freyder");
+		
+		trabajador1.setseccion("RRHH"); 
+		
+		System.out.println(trabajador1.getdatos());
+		System.out.println(trabajador2.getdatos());
+		
+	}
+
+}
+
+class Empleados{
+	
+	//declaracion de variables de clase
+	private final String nombre; //declaracion de variable tipo constante
+	private String seccion;
+	
+	//Metodos
+	
+	//El ejemplo refiere a la creacion de una serie de trabajadores nuevos siempre tendran la seccion "Administracion"
+	//y con el tiempo se puede cambiar de seccion
+	
+	public Empleados(String nom){ //constructor para inicializar los objetos que se utilicen
+		
+		nombre=nom;
+		
+		seccion= "Administracion";
+		
+	}
+	
+	public void setseccion(String seccion){ //setter donde permite cambiar de seccion si se solicita
+		
+		this.seccion= seccion; // this apunta a la variable o campo de clase, el otro es el parametro o argumento del metodo
+		
+	}
+	
+	public String getdatos(){ //getter para darnos los datos de cada uno de los trabajadores
+		
+		return "el nombre del trabajador es: " + nombre + " y la sección es: " + seccion;
+	}
+	
+	
+
+	
+	
+	
+}
+

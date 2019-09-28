@@ -1,0 +1,77 @@
+package poo;
+
+public class Ejemplo_Final_Constantes {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//Empleados trabajador1= new Empleados("Freyder",1); //instanciando un nuevo objeto sobre el constructor que lo esta inicializando
+		//Empleados trabajador2= new Empleados("Alejandra",2); //Pasando dos parametros al constructor
+		
+		Empleados trabajador1= new Empleados("Freyder"); //instanciando un nuevo objeto sobre el constructor que lo esta inicializando
+		Empleados trabajador2= new Empleados("Alejandra"); //Pasando parametro al constructor
+		
+		
+		//System.out.println(trabajador1.getdatos());
+		
+		trabajador1.setseccion("Desarrollo");//seteando o cambiando la sección de los trabajadores que ya no sera "Administración" 
+		
+		System.out.println(trabajador1.getdatos());
+		System.out.println(trabajador2.getdatos());
+	
+				
+	}
+
+}
+
+class Empleados{
+	
+	//declaracion de variables de clase
+	
+	private final String nombre; //declaracion de variable tipo constante
+	private String seccion;
+	
+    public static int Id; //con esta variable los trabajadores tendran un id para todos los objetos, no un id de copia para cada objeto
+						    /*en el evento de que sean muchos mas trabajadores y muchos mas objetos instanciados, cada vez que 
+							 * creo un trabajador debo saber en que Id voy, o puede pasar que un trabajador pueda tener el mismo id,
+							 * para dar solución a ello debo utilizar la palabra reservada "Static"
+							 * la cual debe aplicarse a la variable de clase "id" con objeto de que no sea una copia para cada
+							 * objeto si no una variable Unica para que ambos la compartan
+							 * a diferencia de las otras dos variables de clase que si pueden tomar una copia para cada objeto*/
+	
+	
+	/*
+	 * Metodos
+	 * El ejemplo refiere a la creacion de una serie de trabajadores nuevos siempre tendran la seccion "Administration"
+	   y con el tiempo se puede cambiar de seccion
+	 */
+	public Empleados(String nom){ //constructor para inicializar los objetos que se utilicen
+		
+		nombre=nom;
+		
+		seccion= "Administracion";
+		
+		Id=1; //variable static, Eclipse la representa en cursiva
+		
+	
+		
+	}
+	
+	public void setseccion(String seccion){ //setter donde permite cambiar de seccion si se solicita
+		
+		this.seccion= seccion; // this apunta a la variable o campo de clase, el otro es el parametro o argumento del metodo
+		
+	}
+	
+	public String getdatos(){ //getter para darnos los datos de cada uno de los trabajadores
+		
+		return "el nombre del trabajador es: " + nombre + " y la sección es: " + seccion + " y el Id= " + Id;
+	}
+	
+	
+
+	
+	
+	
+}
+

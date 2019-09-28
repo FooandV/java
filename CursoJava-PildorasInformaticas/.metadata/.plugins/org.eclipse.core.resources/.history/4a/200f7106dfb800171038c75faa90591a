@@ -1,0 +1,30 @@
+package graficos;
+
+import java.awt.GraphicsEnvironment;
+import javax.swing.*;
+
+public class Pruebass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String fuente=JOptionPane.showInputDialog("introduce fuente");
+		boolean estalafuente=false;
+		
+		/*con el siguiente array verificaremos los tipos de fuentes que tenemos almacenanos en nuestro sistema sea windows etc*/
+		String []nombresDeFuentes = GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames();/*con estos dos metodos
+		almacenamos todos los tipos de fuentes que tengo almacenados en mi ordenador*/
+		
+		for (String nombredelafuente: nombresDeFuentes){/*con este for each recorro el array*/
+			
+			if(nombredelafuente.equals(fuente)){
+				
+				estalafuente=true;
+			}
+		}
+		if (estalafuente){
+			System.out.println("Fuente instalada");
+		}else
+			System.out.println("No esta instalada la  fuente");
+	}
+
+}

@@ -1,0 +1,60 @@
+package excepciones_I;
+
+import javax.swing.JOptionPane;
+
+public class Comprueba_Mail {
+
+	public static void main(String[] args) {
+
+		String el_mail = JOptionPane.showInputDialog("Introduce Mail");
+
+		examina_mail(el_mail);
+
+	}
+
+	static void examina_mail(String mail) {
+
+		int arroba = 0;
+		boolean punto = false;
+
+		/*
+		 * se va generar un error implicito para que lanze una excepcion y luego
+		 * sea capturada, pero dicha excepcion sera lanzada como un
+		 * checkException o excepcion comprobada para el caso si el mail tiene
+		 * un string <3 caracteres lanzara un error capturado por un objeto
+		 * excepcion, como no se sabe en la API de java una excepcion que se
+		 * adapte a un String demasiado corto, entonces se utilizara una
+		 * excepcion conocida aunque no se adapte o no tenga sentido, solo se
+		 * hará para conocer la clausula throw
+		 */
+		if (mail.length() <= 3) {
+			/*
+			 * se realiza la instanciacion de la clase
+			 * ArrayIndexOutOfBoundsException
+			 */
+			ArrayIndexOutOfBoundsException mi_excepcion = new ArrayIndexOutOfBoundsException();
+			// luego se lanza la instancia:
+			throw mi_excepcion;
+		}else{
+
+				for (int i = 0; i < mail.length(); i++) {
+		
+					if (mail.charAt(i) == '@') {
+		
+						arroba++;
+					}
+					if (mail.charAt(i) == '.') {
+		
+						punto = true;
+					}
+				}
+					if (arroba == 1 && punto == true) {
+			
+						System.out.println("Es correcto el Mail");
+					} else {
+			
+						System.out.println("No es correcto el Mail");
+					}
+			  }
+	}
+}

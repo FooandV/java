@@ -1,0 +1,65 @@
+package poo;
+
+public class Ejemplo_Final_Constantes {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Empleados trabajador1= new Empleados("Alejandra",1); //instanciando un nuevo objeto sobre el constructor que lo esta inicializando
+		Empleados trabajador2= new Empleados("Freyder",2); //Pasando dos parametros al constructor
+		
+		System.out.println(trabajador1.getdatos());
+		System.out.println(trabajador2.getdatos());
+		
+		//trabajador1.setseccion("RRHH");//seteando o cambiando la sección de los trabajadores que ya no sera "Administración" 
+		
+		//System.out.println(trabajador1.getdatos());
+		//System.out.println(trabajador2.getdatos());
+		
+	}
+
+}
+
+class Empleados{
+	
+	//declaracion de variables de clase
+	
+	private final String nombre; //declaracion de variable tipo constante
+	private String seccion;
+	
+	private int Id; //con esta variable los trabajadores tendran un id para cada uno
+	
+	
+	/*
+	 * Metodos
+	 * El ejemplo refiere a la creacion de una serie de trabajadores nuevos siempre tendran la seccion "Administration"
+	   y con el tiempo se puede cambiar de seccion
+	 */
+	public Empleados(String nom, int Id){ //constructor para inicializar los objetos que se utilicen
+		
+		nombre=nom;
+		
+		seccion= "Administracion";
+		
+		this.Id=Id;
+		
+	}
+	
+	public void setseccion(String seccion){ //setter donde permite cambiar de seccion si se solicita
+		
+		this.seccion= seccion; // this apunta a la variable o campo de clase, el otro es el parametro o argumento del metodo
+		
+	}
+	
+	public String getdatos(){ //getter para darnos los datos de cada uno de los trabajadores
+		
+		return "el nombre del trabajador es: " + nombre + " y la sección es: " + seccion + "y el Id= " + Id;
+	}
+	
+	
+
+	
+	
+	
+}
+

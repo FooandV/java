@@ -1,0 +1,15 @@
+package excepciones_I;
+
+import java.util.Scanner;
+
+public class Areas_Peso {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner entrada= new Scanner(System.in);//capturando la entrada de consola
+		System.out.println("Elige una opcion: \n1: ");
+	}
+
+}
+

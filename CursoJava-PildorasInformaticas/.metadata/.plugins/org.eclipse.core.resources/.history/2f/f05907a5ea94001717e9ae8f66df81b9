@@ -1,0 +1,173 @@
+package poo;
+
+import java.util.*;
+
+import javax.swing.JOptionPane;
+
+/**
+ * @author freyder ejemplo donde solo se utilizara el archivo Uso_empleado.java,
+ *         donde estara las nominas de una serie de empleados en una empresa, en
+ *         este se programara todas las clases y metodos, situación que no tiene
+ *         modularidad. El objeto empleado va tener una serie de
+ *         caracteristicas(propiedades): nombre, sueldo, fecha alta y un metodo:
+ *         subir sueldo
+ * 
+ */
+
+public class Uso_Empleado {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		/*
+		 * codigo de ejecución funcional: 1 este codigo comentado esta bien pero
+		 * se puede mejorar Ejemplar de creación de varios objetos a partir de
+		 * la clase Empleado llevando los parametros correspondientes
+		 * 
+		 * 
+		 * Empleado empleado1= new Empleado("Freyder", 45000, 2017, 10, 15);
+		 * llevando parametros del constructor Empleado empleado2= new
+		 * Empleado("Violetta", 65000, 2025, 12, 4);// llevando parametros del
+		 * constructor Empleado empleado3= new Empleado("Sara", 75000, 2035, 8,
+		 * 8);// llevando parametros del constructor
+		 * 
+		 * empleado1.setSubeSueldo(5); //llamando el metodo para subir el sueldo
+		 * a los empleados empleado2.setSubeSueldo(5); //llamando el metodo para
+		 * subir el sueldo a los empleados empleado3.setSubeSueldo(5);
+		 * //llamando el metodo para subir el sueldo a los empleados
+		 * 
+		 * System.out.println("Nombre:" + empleado1.getNombre() + ";" +
+		 * " Sueldo: " + empleado1.getSueldo() + ";" + "  Fecha de Alta: " +
+		 * empleado1.getFechaContrato());
+		 * 
+		 * System.out.println("Nombre:" + empleado2.getNombre() + ";" +
+		 * " Sueldo: " + empleado2.getSueldo() + ";" + "  Fecha de Alta: " +
+		 * empleado2.getFechaContrato());
+		 * 
+		 * System.out.println("Nombre:" + empleado3.getNombre() + ";" +
+		 * " Sueldo: " + empleado3.getSueldo() + ";" + "  Fecha de Alta: " +
+		 * empleado3.getFechaContrato());
+		 */
+
+		/***********************************************************************************************/
+		/*
+		 * Codigo de Ejecucion 2 funcional utilizando un JoptionPane(para que el
+		 * usuario ingrese la información por pantalla) luego se mostrara por
+		 * consola se crea un array del tipo de objeto Empleado para que se
+		 * almacenen los empleados y los atributos que se deben enviar luego se
+		 * crea dos bucles for tradicionales para subir el sueldo y otro para
+		 * imprimir la informacion por consola
+		 
+		
+		 Empleado[] misEmpleados = new Empleado[3]; // creando objeto Empleado de  tipo array
+		 
+		 
+		 
+		 for (int i = 0; i < 3; i++) {
+			 misEmpleados[i] = new Empleado(JOptionPane.showInputDialog("nombre"),
+			 Double.parseDouble(JOptionPane.showInputDialog("sueldo")),
+			 Integer.parseInt(JOptionPane.showInputDialog("año")),
+			 Integer.parseInt(JOptionPane.showInputDialog("mes")),
+			 Integer.parseInt(JOptionPane.showInputDialog("dia"))); 
+		 }
+		 */
+		
+		 Empleado[] misEmpleados = new Empleado[3];
+
+			misEmpleados[0] = new Empleado("Violetta", 65000, 2025, 12, 4);
+			misEmpleados[1] = new Empleado("Sara", 75000, 2035, 8, 8);
+			misEmpleados[2] = new Empleado("Sara"); // creación o instancia de objeto Empleado e inicialización del constructor2 q solo tiene un parametro
+
+		 for(int i=0; i<3; i++){ //bucle for traducional para subir el sueldo a todos los empleados
+		 
+		 misEmpleados[i].setSubeSueldo(5); }
+		 
+
+		
+		 for (Empleado e : misEmpleados) { // bucle for each mejorado: creando
+		 // una variable "e" del tipo que // tenemos almacenado dentro del  array misEmpleados
+		 
+		 e.setSubeSueldo(5); }
+		
+		 /*for(int i=0; i<3; i++){ //bucle for para decir que nos imprima en pantalla la información de los empleados
+		 
+		 System.out.println("Nombre: " + misEmpleados[i].getNombre() +
+		 " Sueldo; " + misEmpleados[i].getSueldo() + " Fecha de Alta" +
+		 misEmpleados[i].getFechaContrato()); }
+		 */
+	
+		 for (Empleado e : misEmpleados) {// bucle for each mejorado
+		 
+		 System.out.println( "Nombre: " + e.getNombre() + " Sueldo: " +  e.getSueldo() + " ; " + " Fecha de Alta: "  + e.getFechaContrato()); 
+		 }
+		
+		
+		/***********************************************************************************************/
+	}
+
+}
+
+/*
+ * Cuando se utiliza un unico elemento para programar, solamente una de las
+ * clases va tener el modificador de acceso: Public que es la que tiene el
+ * metodo main
+ */
+
+class Empleado {
+
+	/* metodo constructor1 recibiendo parametros o argumentos */
+
+	public Empleado(String nom, double sue, int agno, int mes, int dia) {
+		nombre = nom;
+		sueldo = sue;
+
+		GregorianCalendar calendario = new GregorianCalendar(agno, mes - 1, dia); // creando
+																					// objeto
+																					// calendario
+
+		altaContrato = calendario.getTime(); // llamando el metodo para que me
+												// devuelva la fecha de
+												// calendario que se asigno
+
+	}
+
+	public Empleado(String nom) { // constructor2 enviando solo 1 parametro
+
+		nombre = nom;
+	}
+
+	// getter y setters
+
+	public String getNombre() { // GETTER
+
+		return nombre;
+	}
+
+	public double getSueldo() { // getter
+
+		return sueldo;
+	}
+
+	public Date getFechaContrato() { // getter
+
+		return altaContrato;
+	}
+
+	public void setSubeSueldo(double porcentaje) {
+
+		double aumento = sueldo * porcentaje / 100;
+
+		sueldo += aumento;
+
+	}
+
+	/*
+	 * variables de clase, que deben ser solo modificadas utilizando los metodos
+	 * correspondientes, este caso el metodo constructor
+	 */
+	private String nombre;
+	private double sueldo;
+	private Date altaContrato; // variable de clase Date donde se hace necesario
+								// importar el paquete java.util
+
+}

@@ -1,0 +1,35 @@
+package poo;
+
+public class Coche {
+	
+	private int ruedas;
+	
+	private int largo;
+	
+	private int ancho;
+	
+	private int motor;
+	
+	private int peso;
+	
+	
+	public Coche(){ //metodo constructor= inicializa la clase, tiene el mismo nombre de la clase
+		
+		ruedas=4;
+		
+		largo=2000;
+		
+		ancho=300;
+		
+		motor=1600;
+		
+		peso=500;
+	}
+
+
+	public String getLargo() {
+		return "El largo del coche es: " + largo;
+	}
+
+	
+}

@@ -1,0 +1,44 @@
+package excepciones_I;
+import javax.swing.JOptionPane;
+
+public class Comprueba_Mail {
+
+	public static void main(String[] args) {
+		
+		
+		String el_mail= JOptionPane.showInputDialog("Introduce Mail");
+		
+		examina_mail(el_mail);
+		
+	}
+	
+	 static  void examina_mail(String mail){
+		
+		int arroba=0;
+		boolean punto=false;
+		
+		for(int i=0; i<mail.length();i++){
+			
+			if(mail.charAt(i)=='@'){
+				
+				arroba++;
+			}
+			
+			if(mail.charAt(i)=='.'){
+				
+				punto=true;
+			}
+		}
+		
+		if (arroba==1 && punto==true) {
+			
+			System.out.println("Es correcto el Mail");
+		}
+		else {
+			
+			System.out.println("No es correcto el Mail");
+		}
+	}
+}
+
+
